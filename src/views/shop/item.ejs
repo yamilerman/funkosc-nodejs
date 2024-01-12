@@ -1,0 +1,46 @@
+<!--Header section with NavBar-->
+<%- include('../components/general/header.ejs') %>
+<!--Header section with NavBar end-->
+
+
+    <!--Main content section-->
+    <main>
+        <!--Item content section-->
+        <section class="article-products container">
+          <article class="products">
+            <picture class="products-image">
+              <img class="centrar" src="<%= productById.image_front %>" alt="<%= productById.product_description %>">
+            </picture>
+            <div class="products-content">
+              <p class="products-collection-title"><%= productById.licence.licence_name %></p>
+              <h3 class="products-title title"><%= productById.product_name %></h3>
+              <p class="products-text"> Figura coleccionable de <%= productById.product_name %></p>
+              <h3 class="products-price">&#36; <%= productById.price %></h3>
+              <div class="products-buttons-adder">
+                <div class="cart-item-input input-box">
+                  <input type="text" name="quantity" id="quantity" placeholder="0">
+                  <div class="products-buttons-wrapper-adder input-box-buttons">
+                    <button id="add">+</button>
+                    <button id="subtrack">-</button>
+                  </div>
+                </div>
+                <input type="button" name="Agregar a Carrito" value="Agregar a Carrito">
+              </div>
+              <span style="color: #1d84b5">
+                <a href="/">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS
+              </span>
+            </div>
+          </article>
+        </section>
+        <!--Item content section end-->
+  
+          
+        <!--Slider section-->
+        <%- include('../components/partials/slider.ejs') %>
+        <!--Slider section end-->
+      </main>
+      <!--Main content section end-->
+
+<!--Footer section-->
+<%- include('../components/general/footer.ejs') %>
+<!--Footer section end-->
